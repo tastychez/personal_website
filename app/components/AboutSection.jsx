@@ -6,14 +6,14 @@ import { forwardRef } from 'react';
 const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
   const personalInfo = {
     name: "Hong Yi Zhang",
-    title: "Full-Stack Developer & Designer",
-    description: "I'm a passionate developer with expertise in modern web technologies. I love creating elegant solutions to complex problems and building user-friendly applications. With over 5 years of experience in software development, I specialize in React, Node.js, and cloud technologies.",
+    title: "Electrical & Computer Engineering Student",
+    description: "I'm a passionate engineering student at Olin College of Engineering, deeply interested in all things AI, software, and computer systems. I love exploring innovative technologies and building solutions that bridge the gap between hardware and software.",
     email: "hong.yi.zhang@example.com",
     location: "San Francisco, CA",
-    photo: "https://placehold.co/400x400/6366f1/ffffff?text=HYZ"
+    photo: "/profile-photo.jpg"
   };
 
-  const skills = ["JavaScript", "React", "Node.js", "Python", "UI/UX Design", "MongoDB", "AWS", "Git"];
+  const skills = ["AI", "Model Context Protocol", "Java", "Python", "Git", "React", "MATLAB", "C++", "Cybersecurity", "SolidWorks", "KiCad", "Shop Machine Trained", "Digital Editing"];
 
   return (
     <section ref={ref} id="about" className="relative pt-32 pb-20 px-6 min-h-screen flex items-center">

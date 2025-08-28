@@ -7,38 +7,48 @@ const ExperienceSection = forwardRef((props, ref) => {
   const experiences = [
     {
       id: 1,
-      title: "Senior Full-Stack Developer",
-      company: "Tech Innovations Inc.",
-      period: "2022 - Present",
-      description: "Lead development of scalable web applications using React, Node.js, and cloud infrastructure. Mentor junior developers and collaborate with cross-functional teams to deliver high-quality software solutions.",
-      achievements: [
-        "Led migration of legacy system to microservices architecture",
-        "Improved application performance by 40% through optimization",
-        "Mentored 3 junior developers in best practices"
-      ]
+      title: "Software Engineering Intern",
+      company: "Amazon — Tablet Launcher Team",
+      period: "TBD",
+      description: "",
+      achievements: []
     },
     {
       id: 2,
-      title: "Frontend Developer",
-      company: "Digital Solutions LLC",
-      period: "2020 - 2022",
-      description: "Developed responsive user interfaces for enterprise clients using React and modern frontend technologies. Collaborated with UX designers to implement pixel-perfect designs.",
+      title: "Research Assistant, AI Empower (AlmPower)",
+      company: "Olin Public Interest Technology — Needham, MA",
+      period: "Aug 2024 – Feb 2025",
+      description: "Investigated bias in Automatic Speech Recognition (ASR) models and fine‑tuned models to improve accuracy for stuttered speech and accents in English and Mandarin.",
       achievements: [
-        "Built 15+ client-facing applications with 95%+ user satisfaction",
-        "Implemented design system that reduced development time by 30%",
-        "Integrated analytics and A/B testing frameworks"
+        "Led data collection, bias analysis, reporting, and experimentation for inclusive ASR",
+        "Reduced mean Word Error Rate (WER) from 20.4% → 6.2% for stuttered English and mean Character Error Rate (CER) from 66.4% → 19.0% for stuttered Mandarin",
+        "Demonstrated robustness across stutter types, addressing challenges like word/sound repetition",
+        "Advanced project to the AAAS Science Competition poster round after passing the abstract round"
       ]
     },
     {
       id: 3,
-      title: "Software Engineer",
-      company: "Startup Ventures",
-      period: "2018 - 2020",
-      description: "Contributed to full product lifecycle from concept to deployment. Worked on both frontend and backend components of web applications.",
+      title: "Avionics Sub‑Team Member",
+      company: "Olin Rocketry — Needham, MA",
+      period: "Aug 2024 – Feb 2025",
+      description: "Contributed to avionics systems for competition‑grade rockets, focusing on reliable telemetry and data transmission for IREC.",
       achievements: [
-        "Developed MVP that secured $2M in seed funding",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Built RESTful APIs serving 10K+ daily active users"
+        "Developed a custom radio PCB in KiCad for real‑time communication between rocket and ground station",
+        "Integrated antenna interfaces and wireless data transmission; programmed avionics using Arduino IDE",
+        "Assisted in CAD modeling and 3D printing of radio box components to enhance durability and functionality",
+        "Researched advanced sensors for next‑generation rocket systems"
+      ]
+    },
+    {
+      id: 4,
+      title: "Founder",
+      company: "Tone Tutoring — New York, NY",
+      period: "Dec 2022 – May 2024",
+      description: "Established a volunteer tutoring organization dedicated to supporting low‑income elementary and middle school students across New York City, providing free academic support and personalized learning plans.",
+      achievements: [
+        "Developed personalized learning plans tailored to individual strengths, challenges, and goals to enhance academic performance",
+        "Partnered with 12+ schools citywide to expand access to educational resources and ongoing support",
+        "Fostered confidence and skill development by creating a nurturing environment for students to thrive academically"
       ]
     }
   ];

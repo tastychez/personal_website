@@ -7,28 +7,25 @@ const EducationSection = forwardRef((props, ref) => {
   const education = [
     {
       id: 1,
-      degree: "Master of Science in Computer Science",
-      school: "Stanford University",
-      period: "2016 - 2018",
-      gpa: "3.8/4.0",
-      description: "Specialized in Artificial Intelligence and Machine Learning. Conducted research on neural network optimization techniques and published paper on efficient deep learning models.",
-      achievements: [
-        "Graduated with Honors",
-        "Research paper published in IEEE Conference on AI",
-        "Teaching Assistant for Data Structures course"
-      ]
+      degree: "Bachelor of Science in Electrical and Computer Engineering",
+      school: "Olin College of Engineering, Needham, Massachusetts",
+      period: "2024 – 2028",
+      gpa: "N/A",
+      description: "Relevant Coursework: Applied Linear Algebra, Modeling and Simulation, Design Nature.",
+      achievements: []
     },
     {
       id: 2,
-      degree: "Bachelor of Science in Software Engineering",
-      school: "University of California, Berkeley",
-      period: "2012 - 2016",
-      gpa: "3.7/4.0",
-      description: "Comprehensive program covering software development, algorithms, and system design. Participated in multiple hackathons and coding competitions.",
+      degree: "High School Diploma",
+      school: "High School for Mathematics, Science and Engineering at City College, Manhattan, New York",
+      period: "2020 – 2024",
+      gpa: "4.0/4.0",
+      description: "Relevant Coursework: AP Computer Science A, AP Calculus BC, AP Physics C: Mechanics.",
       achievements: [
-        "Dean's List for 6 semesters",
-        "1st Place in Regional Hackathon 2015",
-        "Developed award-winning capstone project"
+        "Amazon Future Engineer Scholarship: $40,000 for tuition and a guaranteed paid internship at Amazon as a freshman (selected from 5,000+ applicants)",
+        "Outstanding Research Award, NYU STEP: Published a 15-page paper and presented research on the impact of AI in cybersecurity",
+        "Co-Founder - Coding Club; Co-President - Asian Cultural Society",
+        "Participated in NYU CS4CS, a month-long summer program teaching cybersecurity through projects and CTF competitions"
       ]
     }
   ];
