@@ -7,26 +7,26 @@ const ProjectsSection = forwardRef((props, ref) => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A full-featured online store with payment processing, inventory management, and user authentication built with React and Node.js.",
-      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=E-Commerce",
-      tech: ["React", "Node.js", "MongoDB"],
+      title: "Project Coming Soon",
+      description: "Exciting new project in development. Stay tuned for updates on this innovative solution that combines cutting-edge technology with practical applications.",
+      image: "https://placehold.co/600x400/8b5cf6/ffffff?text=Coming+Soon",
+      tech: ["In Development"],
       link: "#"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, team features, and project tracking capabilities.",
-      image: "https://placehold.co/600x400/06b6d4/ffffff?text=Task+App",
-      tech: ["Vue.js", "Firebase", "Tailwind CSS"],
+      title: "Project Coming Soon",
+      description: "Another exciting project currently in the works. This will showcase advanced engineering concepts and real-world problem solving.",
+      image: "https://placehold.co/600x400/06b6d4/ffffff?text=Coming+Soon",
+      tech: ["In Development"],
       link: "#"
     },
     {
       id: 3,
-      title: "Weather Dashboard",
-      description: "An interactive weather application that provides real-time forecasts, radar maps, and historical data visualization.",
-      image: "https://placehold.co/600x400/10b981/ffffff?text=Weather+App",
-      tech: ["JavaScript", "D3.js", "OpenWeather API"],
+      title: "Project Coming Soon",
+      description: "A third innovative project that's currently being developed. This will demonstrate practical applications of engineering principles.",
+      image: "https://placehold.co/600x400/10b981/ffffff?text=Coming+Soon",
+      tech: ["In Development"],
       link: "#"
     }
   ];
