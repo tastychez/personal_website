@@ -7,15 +7,16 @@ const ExperienceSection = forwardRef((props, ref) => {
   const experiences = [
     {
       id: 1,
-      title: "Software Engineering Intern",
-      company: "Amazon — Tablet Launcher Team",
+      title: "Software Engineering Intern, Tablet Launcher Team",
+      company: "Amazon — Seattle, WA",
       period: "TBD",
       description: "",
-      achievements: []
+      achievements: [],
+      companyLogo: "Amazon.jpg" // Added company logo path
     },
     {
       id: 2,
-      title: "Research Assistant, AI Empower (AlmPower)",
+      title: "Research Assistant, AlmPower",
       company: "Olin Public Interest Technology — Needham, MA",
       period: "Aug 2024 – Feb 2025",
       description: "Investigated bias in Automatic Speech Recognition (ASR) models and fine‑tuned models to improve accuracy for stuttered speech and accents in English and Mandarin.",
@@ -24,11 +25,12 @@ const ExperienceSection = forwardRef((props, ref) => {
         "Reduced mean Word Error Rate (WER) from 20.4% → 6.2% for stuttered English and mean Character Error Rate (CER) from 66.4% → 19.0% for stuttered Mandarin",
         "Demonstrated robustness across stutter types, addressing challenges like word/sound repetition",
         "Advanced project to the AAAS Science Competition poster round after passing the abstract round"
-      ]
+      ],
+      companyLogo: "AImPower.png" // Added company logo path
     },
     {
       id: 3,
-      title: "Avionics Sub‑Team Member",
+      title: "Sub‑Team Member, Avionics",
       company: "Olin Rocketry — Needham, MA",
       period: "Aug 2024 – Feb 2025",
       description: "Contributed to avionics systems for competition‑grade rockets, focusing on reliable telemetry and data transmission for IREC.",
@@ -37,7 +39,8 @@ const ExperienceSection = forwardRef((props, ref) => {
         "Integrated antenna interfaces and wireless data transmission; programmed avionics using Arduino IDE",
         "Assisted in CAD modeling and 3D printing of radio box components to enhance durability and functionality",
         "Researched advanced sensors for next‑generation rocket systems"
-      ]
+      ],
+      companyLogo: "rocketry.jpeg" // Added company logo path
     },
     {
       id: 4,
@@ -49,7 +52,8 @@ const ExperienceSection = forwardRef((props, ref) => {
         "Developed personalized learning plans tailored to individual strengths, challenges, and goals to enhance academic performance",
         "Partnered with 12+ schools citywide to expand access to educational resources and ongoing support",
         "Fostered confidence and skill development by creating a nurturing environment for students to thrive academically"
-      ]
+      ],
+      companyLogo: "tone_tutoring.jpg" // Added company logo path
     }
   ];
 
@@ -86,11 +90,27 @@ const ExperienceSection = forwardRef((props, ref) => {
                     : 'md:ml-20'
                 }`}>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">
-                        {exp.title}
-                      </h3>
-                      <p className="text-purple-400 font-semibold">{exp.company}</p>
+                    <div className="flex items-center gap-4">
+                      <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                        <img
+                          src={exp.companyLogo}
+                          alt={`${exp.company} logo`}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            e.target.nextSibling.style.display = 'flex';
+                          }}
+                        />
+                        <div className="w-full h-full bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg hidden">
+                          {exp.company.split(' ')[0][0]}
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">
+                          {exp.title}
+                        </h3>
+                        <p className="text-purple-400 font-semibold">{exp.company}</p>
+                      </div>
                     </div>
                     <div className="mt-2 md:mt-0">
                       <span className="text-cyan-400 font-medium bg-cyan-400/10 px-3 py-1 rounded-full">

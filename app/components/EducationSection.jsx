@@ -8,7 +8,7 @@ const EducationSection = forwardRef((props, ref) => {
     {
       id: 1,
       degree: "Bachelor of Science in Electrical and Computer Engineering",
-      school: "Olin College of Engineering, Needham, Massachusetts",
+      school: "Olin College of Engineering — Needham, Massachusetts",
       period: "2024 – 2028",
       gpa: "N/A",
       description: "Relevant Coursework: Applied Linear Algebra, Modeling and Simulation, Design Nature.",
@@ -17,7 +17,7 @@ const EducationSection = forwardRef((props, ref) => {
     {
       id: 2,
       degree: "High School Diploma",
-      school: "High School for Mathematics, Science and Engineering at City College, Manhattan, New York",
+      school: "High School for Mathematics, Science, and Engineering at City College — Manhattan, New York",
       period: "2020 – 2024",
       gpa: "4.0/4.0",
       description: "Relevant Coursework: AP Computer Science A, AP Calculus BC, AP Physics C: Mechanics.",
