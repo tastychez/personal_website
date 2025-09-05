@@ -2,8 +2,15 @@
 'use client';
 
 import { forwardRef } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const ExperienceSection = forwardRef((props, ref) => {
+  const [headerRef, isHeaderVisible] = useScrollAnimation();
+  const [exp1Ref, isExp1Visible] = useScrollAnimation();
+  const [exp2Ref, isExp2Visible] = useScrollAnimation();
+  const [exp3Ref, isExp3Visible] = useScrollAnimation();
+  const [exp4Ref, isExp4Visible] = useScrollAnimation();
+  
   const experiences = [
     {
       id: 1,
@@ -67,11 +74,11 @@ const ExperienceSection = forwardRef((props, ref) => {
     <section ref={ref} id="experience" className="relative py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/30 to-black"></div>
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent animate-fade-in">
+        <div ref={headerRef} className={`text-center mb-20 scroll-reveal ${isHeaderVisible ? 'revealed' : ''}`}>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
             Professional Experience
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             My journey in the tech industry, working with innovative companies and building impactful solutions.
           </p>
         </div>
@@ -81,12 +88,16 @@ const ExperienceSection = forwardRef((props, ref) => {
           <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-cyan-500 transform -translate-x-1/2"></div>
           
           <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <div
-                key={exp.id}
-                className="relative group"
-                style={{ animationDelay: `${400 + index * 200}ms` }}
-              >
+            {experiences.map((exp, index) => {
+              const expRef = [exp1Ref, exp2Ref, exp3Ref, exp4Ref][index];
+              const isExpVisible = [isExp1Visible, isExp2Visible, isExp3Visible, isExp4Visible][index];
+              
+              return (
+                <div
+                  key={exp.id}
+                  ref={expRef}
+                  className={`relative group scroll-reveal ${isExpVisible ? 'revealed' : ''}`}
+                >
                 {/* Timeline dot */}
                 <div className="hidden md:block absolute left-8 w-4 h-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full transform -translate-x-1/2 group-hover:scale-125 transition-transform duration-300"></div>
                 
@@ -140,7 +151,8 @@ const ExperienceSection = forwardRef((props, ref) => {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

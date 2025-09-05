@@ -2,9 +2,11 @@
 'use client';
 
 import { forwardRef, useState } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const ProjectsSection = forwardRef((props, ref) => {
   const [expandedProject, setExpandedProject] = useState(null);
+  const [headerRef, isHeaderVisible] = useScrollAnimation();
 
   const projects = [
     {
@@ -48,28 +50,30 @@ const ProjectsSection = forwardRef((props, ref) => {
     <section ref={ref} id="projects" className="relative py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent animate-fade-in">
+        <div ref={headerRef} className={`text-center mb-20 scroll-reveal ${isHeaderVisible ? 'revealed' : ''}`}>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-purple-300 bg-clip-text text-transparent">
             Featured Projects
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Cutting-edge solutions that push the boundaries of what's possible in web development.
           </p>
         </div>
 
         <div className="flex gap-8 transition-all duration-700 justify-center">
-          {projects.map((project, index) => (
-            <div
-              key={project.id}
-              className={`group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-700 transform flex-shrink-0 ${
-                expandedProject === project.id 
-                  ? 'w-full md:w-2/3 scale-100' 
-                  : expandedProject 
-                    ? 'w-1/6 md:w-1/6 scale-90 opacity-60 hover:opacity-80' 
-                    : 'w-full md:w-1/3 hover:scale-105'
-              } hover:shadow-2xl hover:shadow-purple-500/10`}
-              style={{ animationDelay: `${400 + index * 200}ms` }}
-            >
+          {projects.map((project, index) => {
+            const [projectRef, isProjectVisible] = useScrollAnimation();
+            return (
+              <div
+                key={project.id}
+                ref={projectRef}
+                className={`group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-700 transform flex-shrink-0 scroll-reveal-scale ${
+                  expandedProject === project.id 
+                    ? 'w-full md:w-2/3 scale-100' 
+                    : expandedProject 
+                      ? 'w-1/6 md:w-1/6 scale-90 opacity-60 hover:opacity-80' 
+                      : 'w-full md:w-1/3 hover:scale-105'
+                } hover:shadow-2xl hover:shadow-purple-500/10 ${isProjectVisible ? 'revealed' : ''}`}
+              >
               <div className="relative overflow-hidden">
                 <img
                   src={project.image}
@@ -119,7 +123,8 @@ const ProjectsSection = forwardRef((props, ref) => {
                 </button>
               </div>
             </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

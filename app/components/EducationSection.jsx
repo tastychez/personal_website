@@ -2,8 +2,13 @@
 'use client';
 
 import { forwardRef } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const EducationSection = forwardRef((props, ref) => {
+  const [headerRef, isHeaderVisible] = useScrollAnimation();
+  const [edu1Ref, isEdu1Visible] = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
+  const [edu2Ref, isEdu2Visible] = useScrollAnimation({ rootMargin: '0px 0px -100px 0px' });
+  
   const education = [
     {
       id: 1,
@@ -34,11 +39,11 @@ const EducationSection = forwardRef((props, ref) => {
     <section ref={ref} id="education" className="relative py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/30 to-black"></div>
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent animate-fade-in">
+        <div ref={headerRef} className={`text-center mb-20 scroll-reveal ${isHeaderVisible ? 'revealed' : ''}`}>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">
             Education
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '200ms' }}>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             My academic journey and the foundation of my technical expertise.
           </p>
         </div>
@@ -48,20 +53,26 @@ const EducationSection = forwardRef((props, ref) => {
           <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-500 to-purple-500 transform -translate-x-1/2"></div>
           
           <div className="space-y-12">
-            {education.map((edu, index) => (
-              <div
-                key={edu.id}
-                className="relative group"
-                style={{ animationDelay: `${400 + index * 200}ms` }}
-              >
+            {education.map((edu, index) => {
+              const eduRef = index === 0 ? edu1Ref : edu2Ref;
+              const isEduVisible = index === 0 ? isEdu1Visible : isEdu2Visible;
+              
+              
+              return (
+                <div
+                  key={edu.id}
+                  className="relative group"
+                >
                 {/* Timeline dot */}
                 <div className="hidden md:block absolute left-8 w-4 h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full transform -translate-x-1/2 group-hover:scale-125 transition-transform duration-300"></div>
                 
-                <div className={`md:ml-20 p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-500 ${
-                  index % 2 === 0 
-                    ? 'md:mr-20' 
-                    : 'md:ml-20'
-                }`}>
+                <div 
+                  ref={eduRef}
+                  className={`md:ml-20 p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-500 scroll-reveal ${isEduVisible ? 'revealed' : ''} ${
+                    index % 2 === 0 
+                      ? 'md:mr-20' 
+                      : 'md:ml-20'
+                  }`}>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
@@ -94,7 +105,8 @@ const EducationSection = forwardRef((props, ref) => {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

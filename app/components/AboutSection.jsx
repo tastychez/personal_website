@@ -2,8 +2,13 @@
 'use client';
 
 import { forwardRef } from 'react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
+  const [textRef, isTextVisible] = useScrollAnimation();
+  const [imageRef, isImageVisible] = useScrollAnimation();
+  const [skillsRef, isSkillsVisible] = useScrollAnimation();
+
   const personalInfo = {
     name: "Hong Yi Zhang",
     title: "Electrical & Computer Engineering Student",
@@ -26,48 +31,38 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-10">
+          <div ref={textRef} className={`space-y-10 scroll-reveal-left ${isTextVisible ? 'revealed' : ''}`}>
             <div className="space-y-6">
               <h1 
-                className="text-6xl lg:text-8xl font-bold leading-tight bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent animate-fade-in"
+                className="text-6xl lg:text-8xl font-bold leading-tight bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent"
                 style={{ 
-                  animationDelay: '200ms',
                   lineHeight: '1.1',
                   marginBottom: '0.5em'
                 }}
               >
                 Hi, I'm {personalInfo.name.split(' ')[0]}
               </h1>
-              <p 
-                className="text-3xl text-purple-300 font-light animate-fade-in"
-                style={{ animationDelay: '400ms' }}
-              >
+              <p className="text-3xl text-purple-300 font-light">
                 {personalInfo.title}
               </p>
-              <p 
-                className="text-xl text-gray-300 leading-relaxed animate-fade-in"
-                style={{ animationDelay: '600ms' }}
-              >
+              <p className="text-xl text-gray-300 leading-relaxed">
                 {personalInfo.description}
               </p>
             </div>
             
-            <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '800ms' }}>
+            <div ref={skillsRef} className={`flex flex-wrap gap-4 scroll-reveal ${isSkillsVisible ? 'revealed' : ''}`}>
               {skills.map((skill, index) => (
                 <span
                   key={index}
                   className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-medium hover:bg-purple-500/20 transition-all duration-300"
-                  style={{ animationDelay: `${1000 + index * 100}ms` }}
                 >
                   {skill}
                 </span>
               ))}
             </div>
-
-
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          <div ref={imageRef} className={`flex justify-center lg:justify-end scroll-reveal-right ${isImageVisible ? 'revealed' : ''}`}>
             <div 
               className="relative group"
               style={{
