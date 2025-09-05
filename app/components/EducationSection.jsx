@@ -10,7 +10,7 @@ const EducationSection = forwardRef((props, ref) => {
       degree: "Bachelor of Science in Electrical and Computer Engineering",
       school: "Olin College of Engineering — Needham, Massachusetts",
       period: "2024 – 2028",
-      gpa: "N/A",
+      gpa: "4.0/4.0",
       description: "Relevant Coursework: Applied Linear Algebra, Modeling and Simulation, Design Nature.",
       achievements: []
     },

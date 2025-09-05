@@ -9,9 +9,15 @@ const ExperienceSection = forwardRef((props, ref) => {
       id: 1,
       title: "Software Engineering Intern, Tablet Launcher Team",
       company: "Amazon — Seattle, WA",
-      period: "TBD",
-      description: "",
-      achievements: [],
+      period: "May 2025 — Aug 2025",
+      description: "Developed AI-powered tools and infrastructure for internal teams, focusing on automation and efficiency improvements through machine learning integration.",
+      achievements: [
+        "Designed and built an AI-powered Jira bug root cause analyzer, integrating Jira with Amazon Q (LLM) to cut bug triage time by up to 50% through automated analysis and fix suggestions",
+        "Engineered a multi-stage AI pipeline (bug parsing, historical issue retrieval, root cause analysis) that achieved 90–95% accuracy in predicting likely fixes across real-world tickets",
+        "Implemented secure authentication using AWS Secrets Manager, replacing legacy token methods and improving adoption and security across multiple teams",
+        "Identified and resolved a critical MCP bug that prevented proper Jira tool visibility, directly enabling broader usage across the org",
+        "Extended MCP server capabilities by building a Jira attachments integration, unlocking AI-powered log and media analysis for faster debugging and root cause identification"
+      ],
       companyLogo: "Amazon.jpg" // Added company logo path
     },
     {
