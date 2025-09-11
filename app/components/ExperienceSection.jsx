@@ -25,7 +25,7 @@ const ExperienceSection = forwardRef((props, ref) => {
         "Identified and resolved a critical MCP bug that prevented proper Jira tool visibility, directly enabling broader usage across the org",
         "Extended MCP server capabilities by building a Jira attachments integration, unlocking AI-powered log and media analysis for faster debugging and root cause identification"
       ],
-      companyLogo: "Amazon.jpg" // Added company logo path
+      companyLogo: "/amazon.jpg" // Added company logo path
     },
     {
       id: 2,
@@ -39,7 +39,7 @@ const ExperienceSection = forwardRef((props, ref) => {
         "Demonstrated robustness across stutter types, addressing challenges like word/sound repetition",
         "Advanced project to the AAAS Science Competition poster round after passing the abstract round"
       ],
-      companyLogo: "AImPower.png" // Added company logo path
+      companyLogo: "/AImpower.png" // Added company logo path
     },
     {
       id: 3,
@@ -53,7 +53,7 @@ const ExperienceSection = forwardRef((props, ref) => {
         "Assisted in CAD modeling and 3D printing of radio box components to enhance durability and functionality",
         "Researched advanced sensors for next‑generation rocket systems"
       ],
-      companyLogo: "rocketry.jpeg" // Added company logo path
+      companyLogo: "/rocketry.jpeg" // Added company logo path
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ const ExperienceSection = forwardRef((props, ref) => {
         "Partnered with 12+ schools citywide to expand access to educational resources and ongoing support",
         "Fostered confidence and skill development by creating a nurturing environment for students to thrive academically"
       ],
-      companyLogo: "tone_tutoring.jpg" // Added company logo path
+      companyLogo: "/tone_tutoring.jpg" // Added company logo path
     }
   ];
 

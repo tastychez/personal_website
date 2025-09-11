@@ -12,7 +12,7 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
   const personalInfo = {
     name: "Hong Yi Zhang",
     title: "Electrical & Computer Engineering Student",
-    description: "I'm a passionate engineering student at Olin College of Engineering, deeply interested in all things AI, software, and computer systems. I love exploring innovative technologies and building solutions that bridge the gap between hardware and software.",
+    description: "I'm an engineering student at Olin College who loves diving into cool tech projects. Whether it's building apps, working with AI, or tinkering with hardware, I enjoy creating things that are fun and exciting. When I'm not coding, you'll find me taking photos or going on a new adventure.",
     email: "hongyizhang143@gmail.com",
     location: "Bronx, New York",
     photo: "/profile-photo.jpg"
