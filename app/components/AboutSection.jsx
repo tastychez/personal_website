@@ -21,23 +21,25 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
   const skills = ["AI/LLM Integration", "Java", "Python", "Git", "React", "MATLAB", "C++", "Cybersecurity", "SolidWorks", "KiCad", "Photography",  "Digital Editing"];
 
   return (
-    <section ref={ref} id="about" className="relative pt-32 pb-20 px-6 min-h-screen flex items-center">
+    <section ref={ref} id="about" className="relative pt-32 pb-20 px-6 min-h-screen flex items-center overflow-visible">
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-cyan-900/20"
+        className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-cyan-900/10"
         style={{
           transform: `translateY(${scrollY * 0.5}px)`,
         }}
       ></div>
       
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div ref={textRef} className={`space-y-10 scroll-reveal-left ${isTextVisible ? 'revealed' : ''}`}>
-            <div className="space-y-6">
+      <div className="max-w-7xl mx-auto relative z-10 overflow-visible">
+        <div className="grid lg:grid-cols-2 gap-16 items-center overflow-visible">
+          <div ref={textRef} className={`space-y-10 scroll-reveal-left relative z-20 overflow-visible ${isTextVisible ? 'revealed' : ''}`}>
+            <div className="space-y-2 overflow-visible">
               <h1 
-                className="text-6xl lg:text-8xl font-bold leading-tight bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent"
+                className="text-6xl lg:text-8xl font-bold leading-tight bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent relative z-30"
                 style={{ 
                   lineHeight: '1.1',
-                  marginBottom: '0.5em'
+                  marginBottom: '0.1em',
+                  paddingBottom: '0.1em',
+                  overflow: 'visible'
                 }}
               >
                 Hi, I'm {personalInfo.name.split(' ')[0]}

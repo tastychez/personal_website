@@ -16,7 +16,7 @@ const ExperienceSection = forwardRef((props, ref) => {
       id: 1,
       title: "Software Engineering Intern, Tablet Launcher Team",
       company: "Amazon — Seattle, WA",
-      period: "May 2025 — Aug 2025",
+      period: "May 2025 – Aug 2025",
       description: "Developed AI-powered tools and infrastructure for internal teams, focusing on automation and efficiency improvements through machine learning integration.",
       achievements: [
         "Designed and built an AI-powered Jira bug root cause analyzer, integrating Jira with Amazon Q (LLM) to cut bug triage time by up to 50% through automated analysis and fix suggestions",
