@@ -23,7 +23,7 @@ const ProjectsSection = forwardRef((props, ref) => {
       title: "Hand Gesture Recognition",
       description: "A desktop application that maps real-time hand gestures from webcam input to emojis using Python, OpenCV, MediaPipe, and PyQt6. Features rule-based gesture recognition with live video feed and emoji overlay.",
       detailedDescription: "• Built a desktop application that maps real-time hand gestures from webcam input to emojis\n• Implemented rule-based gesture recognition (thumbs up/down, fist, peace, open palm) from 21 landmark points\n• Added smoothing algorithms for gesture stability and accuracy\n• Designed PyQt6 UI with live video feed and overlay of detected emoji\n• Created legend for gesture reference and user guidance\n• Added CLI mode for quick testing and development\n• Implemented unit tests for gesture classification accuracy\n• Added comprehensive logging for state changes and debugging\n• Achieved ~24 FPS performance on laptop CPU without GPU acceleration\n• Created as a step toward making digital spaces more inclusive\n• Highlights how vision-based interfaces can better represent people who use gestures and sign language\n\nCheck out the repo here: <a href='https://github.com/tastychez/hand_gesture_detector' target='_blank' rel='noopener noreferrer' class='text-purple-400 hover:text-purple-300 underline'>https://github.com/tastychez/hand_gesture_detector</a>",
-      image: "https://placehold.co/600x400/06b6d4/ffffff?text=Hand+Gestures",
+      image: "/hand-gesture-recognition.png",
       tech: ["Python", "OpenCV", "MediaPipe", "PyQt6", "Computer Vision", "Real-time Processing", "UI/UX Design"],
       link: "#"
     },
@@ -78,7 +78,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                   className={`w-full object-cover transition-all duration-700 ${
                     expandedProject === project.id ? 'h-96' : 'h-64'
                   } group-hover:scale-110`}
-                  style={{ objectPosition: 'center top' }}
+                  style={{ objectPosition: project.id === 2 ? 'left top' : 'center top' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               </div>
