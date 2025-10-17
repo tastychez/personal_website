@@ -31,15 +31,19 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
       
       <div className="max-w-7xl mx-auto relative z-10 overflow-visible">
         <div className="grid lg:grid-cols-2 gap-16 items-center overflow-visible">
-          <div ref={textRef} className={`space-y-10 scroll-reveal-left relative z-20 overflow-visible ${isTextVisible ? 'revealed' : ''}`}>
+          <div ref={textRef} className={`space-y-10 scroll-reveal-left animate-slide-in-left relative z-20 overflow-visible ${isTextVisible ? 'revealed' : ''}`}>
             <div className="space-y-2 overflow-visible">
               <h1 
-                className="text-6xl lg:text-8xl font-bold leading-tight bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent relative z-30"
+                className="text-6xl lg:text-8xl font-bold leading-tight relative z-30"
                 style={{ 
                   lineHeight: '1.1',
                   marginBottom: '0.1em',
                   paddingBottom: '0.1em',
-                  overflow: 'visible'
+                  overflow: 'visible',
+                  background: 'linear-gradient(to right, white, #c084fc, #06b6d4)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
                 }}
               >
                 Hi, I'm {personalInfo.name.split(' ')[0]}
@@ -52,11 +56,16 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
               </p>
             </div>
             
-            <div ref={skillsRef} className={`flex flex-wrap gap-4 scroll-reveal ${isSkillsVisible ? 'revealed' : ''}`}>
+            <div ref={skillsRef} className={`flex flex-wrap gap-4 scroll-reveal animate-fade-in ${isSkillsVisible ? 'revealed' : ''}`}>
               {skills.map((skill, index) => (
                 <span
                   key={index}
-                  className="px-6 py-3 bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-medium hover:bg-purple-500/20 transition-all duration-300"
+                  className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium transition-all duration-300"
+                  style={{
+                    borderWidth: '1px',
+                    borderStyle: 'solid',
+                    borderColor: '#a855f744'
+                  }}
                 >
                   {skill}
                 </span>
@@ -64,20 +73,24 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
             </div>
           </div>
 
-          <div ref={imageRef} className={`flex justify-center lg:justify-end scroll-reveal-right ${isImageVisible ? 'revealed' : ''}`}>
+          <div ref={imageRef} className={`flex justify-center lg:justify-end scroll-reveal-right animate-slide-in-right ${isImageVisible ? 'revealed' : ''}`}>
             <div 
               className="relative group"
               style={{
                 transform: `translateY(${scrollY * -0.3}px)`,
               }}
             >
-              <div className="absolute inset-0 w-96 h-96 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 w-96 h-96 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" style={{
+                background: 'linear-gradient(to right, #a855f7, #06b6d4)'
+              }}></div>
               <img
                 src={personalInfo.photo}
                 alt={personalInfo.name}
                 className="w-96 h-96 rounded-2xl object-cover shadow-2xl border-4 border-white/20 relative z-10 group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-purple-500 to-cyan-500 opacity-0 group-hover:opacity-20 blur transition-opacity duration-500"></div>
+              <div className="absolute -inset-1 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-500" style={{
+                background: 'linear-gradient(to right, #a855f7, #06b6d4)'
+              }}></div>
             </div>
           </div>
         </div>

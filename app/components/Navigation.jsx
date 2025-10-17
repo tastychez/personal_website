@@ -6,7 +6,12 @@ export default function Navigation({ activeTab, setActiveTab, scrollToSection, r
     <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/20 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+          <div className="text-2xl font-bold" style={{
+            background: 'linear-gradient(to right, #a78bfa, #06b6d4)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text'
+          }}>
             Hong Yi Zhang
           </div>
           <div className="hidden md:flex space-x-8">

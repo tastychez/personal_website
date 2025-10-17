@@ -107,7 +107,7 @@ const ContactSection = forwardRef((props, ref) => {
             I'm always interested in new opportunities and exciting projects. Let's create something amazing together.
           </p>
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-10 border border-white/10 shadow-2xl">
-            <div className="animate-pulse">
+            <div className="animate-custom-pulse">
               <div className="h-4 bg-white/10 rounded mb-4"></div>
               <div className="h-4 bg-white/10 rounded mb-4"></div>
               <div className="h-4 bg-white/10 rounded"></div>
@@ -147,7 +147,12 @@ const ContactSection = forwardRef((props, ref) => {
     <section ref={ref} id="contact" className="relative py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/50 to-black"></div>
       <div className="max-w-4xl mx-auto relative z-10 text-center">
-        <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent animate-fade-in">
+        <h2 className="text-5xl font-bold mb-8 animate-fade-in" style={{
+          background: 'linear-gradient(to right, white, #06b6d4)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text'
+        }}>
           Let's Connect
         </h2>
         <p className="text-xl text-gray-400 mb-16 animate-fade-in" style={{ animationDelay: '200ms' }}>

@@ -67,11 +67,19 @@
   opacity: 0;
 }
 
-/* Scroll reveal animations */
+/* Scroll reveal animations - with fallback */
 .scroll-reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: auto;
+  -webkit-backface-visibility: initial;
+  backface-visibility: initial;
+}
+
+.scroll-reveal:not(.revealed) {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
+  transform: translateY(30px);
 }
 
 .scroll-reveal.revealed {
@@ -80,9 +88,17 @@
 }
 
 .scroll-reveal-left {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: auto;
+  -webkit-backface-visibility: initial;
+  backface-visibility: initial;
+}
+
+.scroll-reveal-left:not(.revealed) {
   opacity: 0;
-  transform: translateX(-50px);
-  transition: all 0.8s ease-out;
+  transform: translateX(-30px);
 }
 
 .scroll-reveal-left.revealed {
@@ -91,9 +107,17 @@
 }
 
 .scroll-reveal-right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: auto;
+  -webkit-backface-visibility: initial;
+  backface-visibility: initial;
+}
+
+.scroll-reveal-right:not(.revealed) {
   opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.8s ease-out;
+  transform: translateX(30px);
 }
 
 .scroll-reveal-right.revealed {
@@ -102,15 +126,37 @@
 }
 
 .scroll-reveal-scale {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: auto;
+  -webkit-backface-visibility: initial;
+  backface-visibility: initial;
+}
+
+.scroll-reveal-scale:not(.revealed) {
   opacity: 0;
-  transform: scale(0.9);
-  transition: all 0.8s ease-out;
+  transform: scale3d(0.95, 0.95, 1);
 }
 
 .scroll-reveal-scale.revealed {
   opacity: 1;
-  transform: scale(1);
+  transform: scale3d(1, 1, 1);
 }
 
 /* Add any other custom styles here if needed */
+
+/* Custom pulse animation to avoid browser rendering bugs */
+@keyframes custom-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-custom-pulse {
+  animation: custom-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
