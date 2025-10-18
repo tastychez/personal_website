@@ -8,7 +8,7 @@ export default function Footer() {
       <footer className="relative py-12 px-6 border-t border-white/10">
         <div className="max-w-7xl mx-auto relative z-10 text-center">
           <p className="text-gray-400">
-            &copy; {new Date().getFullYear()} {personalInfo.name}. Crafted with precision and passion.
+            &copy; {new Date().getFullYear()} {personalInfo.name}
           </p>
         </div>
       </footer>

@@ -16,8 +16,13 @@ const EducationSection = forwardRef((props, ref) => {
       school: "Olin College of Engineering — Needham, Massachusetts",
       period: "2024 – 2028",
       gpa: "4.0/4.0",
-      description: "Relevant Coursework: Applied Linear Algebra, Modeling and Simulation, Design Nature.",
-      achievements: []
+      description: "Relevant Coursework: Computer Architecture, Applied Calculus, Software Design, Software System, Principles of Integrated Engineering",
+      achievements: [
+        "50% Off Tuition Merit Scholarship: Awarded merit-based scholarship covering 50% of tuition costs, recognizing academic excellence and leadership potential",
+        "Participated in Stanford SERIS Program: Summer Engineering Research Internship at Stanford University, gaining hands-on research experience in engineering",
+        "Board Member of Ascend Olin Chapter: Served as board member contributing to leadership initiatives and professional development for Pan-Asian students",
+        "Social Media Intern of Olin Admission and Financial Aid: Created engaging content and managed social media presence to attract prospective students and support enrollment initiatives"
+      ]
     },
     {
       id: 2,
@@ -25,7 +30,7 @@ const EducationSection = forwardRef((props, ref) => {
       school: "High School for Mathematics, Science, and Engineering at City College — Manhattan, New York",
       period: "2020 – 2024",
       gpa: "4.0/4.0",
-      description: "Relevant Coursework: AP Computer Science A, AP Calculus BC, AP Physics C: Mechanics.",
+      description: "Relevant Coursework: AP Computer Science A, AP Calculus BC, AP Physics C: Mechanics",
       achievements: [
         "Amazon Future Engineer Scholarship: $40,000 for tuition and a guaranteed paid internship at Amazon as a freshman (selected from 5,000+ applicants)",
         "Outstanding Research Award, NYU STEP: Published a 15-page paper and presented research on the impact of AI in cybersecurity",
