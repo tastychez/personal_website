@@ -68,7 +68,7 @@ const ProjectsSection = forwardRef((props, ref) => {
               <div
                 key={project.id}
                 ref={projectRef}
-                className={`group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-700 transform flex-shrink-0 scroll-reveal-scale ${
+                className={`group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-700 transform flex-shrink-0 ${
                   expandedProject === project.id 
                     ? 'w-full md:w-2/3 scale-100' 
                     : expandedProject 
