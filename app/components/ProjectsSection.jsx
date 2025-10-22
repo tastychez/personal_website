@@ -32,7 +32,7 @@ const ProjectsSection = forwardRef((props, ref) => {
       title: "Arduino Line-Following Robot",
       description: "Designed and built an autonomous robot to navigate a taped track using closed-loop feedback control.",
       detailedDescription: "• Designed and built an autonomous robot to navigate a taped track using closed-loop feedback control\n• Implemented a hierarchical, state-based control algorithm to interpret data from four IR reflectance sensors\n• Controlled two independent DC motors to keep the robot centered on the line and navigate complex turns\n• Designed and 3D-modeled custom modular sensor mounts, enabling rapid iteration and easy adjustment\n• Built a serial command interface to live-tune the robot's base speed from a laptop without recompiling or re-uploading code\n• Logged real-time sensor and motor data to the serial port in CSV format for performance analysis\n• Wrote a Python script with Pandas and Matplotlib to parse and plot the logged data, visualizing the control system's behavior\n• Successfully iterated from a 2-sensor to a 4-sensor design after testing revealed limitations in navigating sharp corners",
-      image: "https://placehold.co/600x400/10b981/ffffff?text=Line+Following+Robot",
+      image: "/line-following-robot.jpeg",
       tech: ["C++ (Arduino)", "Python", "Pandas", "Matplotlib", "Arduino", "3D Modeling", "Robotics", "Control Systems", "Sensor Integration"],
       link: "#"
     }
@@ -83,7 +83,7 @@ const ProjectsSection = forwardRef((props, ref) => {
                   className={`w-full object-cover transition-all duration-700 ${
                     expandedProject === project.id ? 'h-96' : 'h-64'
                   } group-hover:scale-110`}
-                  style={{ objectPosition: project.id === 2 ? 'left top' : 'center top' }}
+                  style={{ objectPosition: project.id === 2 ? 'left top' : project.id === 3 ? 'center center' : 'center top' }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               </div>
