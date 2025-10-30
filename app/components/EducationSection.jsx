@@ -45,12 +45,7 @@ const EducationSection = forwardRef((props, ref) => {
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/30 to-black"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div ref={headerRef} className={`text-center mb-20 scroll-reveal ${isHeaderVisible ? 'revealed' : ''}`}>
-          <h2 className="text-5xl font-bold mb-6" style={{
-            background: 'linear-gradient(to right, white, #f59e0b)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
+          <h2 className="text-5xl font-bold mb-6 text-amber-500">
             Education
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">

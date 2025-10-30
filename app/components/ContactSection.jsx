@@ -100,7 +100,7 @@ const ContactSection = forwardRef((props, ref) => {
       <section ref={ref} id="contact" className="relative py-32 px-6">
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/50 to-black"></div>
         <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent animate-fade-in">
+          <h2 className="text-5xl font-bold mb-8 text-amber-500 animate-fade-in">
             Let's Connect
           </h2>
           <p className="text-xl text-gray-400 mb-16 animate-fade-in" style={{ animationDelay: '200ms' }}>
@@ -147,12 +147,7 @@ const ContactSection = forwardRef((props, ref) => {
     <section ref={ref} id="contact" className="relative py-32 px-6">
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/50 to-black"></div>
       <div className="max-w-4xl mx-auto relative z-10 text-center">
-        <h2 className="text-5xl font-bold mb-8 animate-fade-in" style={{
-          background: 'linear-gradient(to right, white, #f59e0b)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          backgroundClip: 'text'
-        }}>
+        <h2 className="text-5xl font-bold mb-8 text-amber-500 animate-fade-in">
           Let's Connect
         </h2>
         <p className="text-xl text-gray-400 mb-16 animate-fade-in" style={{ animationDelay: '200ms' }}>

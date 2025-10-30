@@ -34,16 +34,12 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
           <div ref={textRef} className={`space-y-10 scroll-reveal-left animate-slide-in-left relative z-20 overflow-visible ${isTextVisible ? 'revealed' : ''}`}>
             <div className="space-y-2 overflow-visible">
               <h1 
-                className="text-6xl lg:text-8xl font-bold leading-tight relative z-30"
+                className="text-6xl lg:text-8xl font-bold leading-tight relative z-30 text-amber-500"
                 style={{ 
                   lineHeight: '1.1',
                   marginBottom: '0.1em',
                   paddingBottom: '0.1em',
-                  overflow: 'visible',
-                  background: 'linear-gradient(to right, white, #f59e0b, #ea580c)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
+                  overflow: 'visible'
                 }}
               >
                 Hi, I'm {personalInfo.name.split(' ')[0]}
