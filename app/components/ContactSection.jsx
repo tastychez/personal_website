@@ -23,11 +23,11 @@ const ContactSection = forwardRef((props, ref) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-14 h-14 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-purple-600 hover:to-cyan-600 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-110 group"
+      className="w-14 h-14 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-amber-600 hover:to-orange-600 hover:border-orange-500/50 transition-all duration-300 transform hover:scale-110 group"
     >
       <div className="relative">
         {children}
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
       </div>
     </a>
   );
@@ -100,7 +100,7 @@ const ContactSection = forwardRef((props, ref) => {
       <section ref={ref} id="contact" className="relative py-32 px-6">
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/50 to-black"></div>
         <div className="max-w-4xl mx-auto relative z-10 text-center">
-          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent animate-fade-in">
+          <h2 className="text-5xl font-bold mb-8 bg-gradient-to-r from-white to-amber-300 bg-clip-text text-transparent animate-fade-in">
             Let's Connect
           </h2>
           <p className="text-xl text-gray-400 mb-16 animate-fade-in" style={{ animationDelay: '200ms' }}>
@@ -124,7 +124,7 @@ const ContactSection = forwardRef((props, ref) => {
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/50 to-black"></div>
         <div className="max-w-4xl mx-auto relative z-10 text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-16 border border-white/10 shadow-2xl">
-            <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-8">
+            <div className="w-20 h-20 bg-gradient-to-r from-amber-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-8">
               <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
@@ -133,7 +133,7 @@ const ContactSection = forwardRef((props, ref) => {
             <p className="text-xl text-gray-300 mb-8">I'll get back to you soon.</p>
             <button
               onClick={() => setIsSubmitted(false)}
-              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
             >
               Send Another Message
             </button>
@@ -148,7 +148,7 @@ const ContactSection = forwardRef((props, ref) => {
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-black/50 to-black"></div>
       <div className="max-w-4xl mx-auto relative z-10 text-center">
         <h2 className="text-5xl font-bold mb-8 animate-fade-in" style={{
-          background: 'linear-gradient(to right, white, #06b6d4)',
+          background: 'linear-gradient(to right, white, #f59e0b)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundClip: 'text'
@@ -170,7 +170,7 @@ const ContactSection = forwardRef((props, ref) => {
                   value={formData.name}
                   onChange={handleInputChange}
                   className={`w-full px-6 py-4 bg-white/10 border rounded-xl focus:outline-none focus:bg-white/20 transition-all duration-300 text-white placeholder-gray-400 ${
-                    errors.name ? 'border-red-500 focus:border-red-500' : 'border-white/20 focus:border-purple-500/50'
+                    errors.name ? 'border-red-500 focus:border-red-500' : 'border-white/20 focus:border-orange-500/50'
                   }`}
                 />
                 {errors.name && (
@@ -185,7 +185,7 @@ const ContactSection = forwardRef((props, ref) => {
                   value={formData.email}
                   onChange={handleInputChange}
                   className={`w-full px-6 py-4 bg-white/10 border rounded-xl focus:outline-none focus:bg-white/20 transition-all duration-300 text-white placeholder-gray-400 ${
-                    errors.email ? 'border-red-500 focus:border-red-500' : 'border-white/20 focus:border-purple-500/50'
+                    errors.email ? 'border-red-500 focus:border-red-500' : 'border-white/20 focus:border-orange-500/50'
                   }`}
                 />
                 {errors.email && (
@@ -201,7 +201,7 @@ const ContactSection = forwardRef((props, ref) => {
                 value={formData.message}
                 onChange={handleInputChange}
                 className={`w-full px-6 py-4 bg-white/10 border rounded-xl focus:outline-none focus:bg-white/20 transition-all duration-300 text-white placeholder-gray-400 resize-none ${
-                  errors.message ? 'border-red-500 focus:border-red-500' : 'border-white/20 focus:border-purple-500/50'
+                  errors.message ? 'border-red-500 focus:border-red-500' : 'border-white/20 focus:border-orange-500/50'
                 }`}
               ></textarea>
               {errors.message && (
@@ -221,7 +221,7 @@ const ContactSection = forwardRef((props, ref) => {
               className={`w-full py-4 rounded-xl font-semibold transition-all duration-300 transform backdrop-blur-sm ${
                 isSubmitting
                   ? 'bg-gray-600 text-gray-300 cursor-not-allowed'
-                  : 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white hover:shadow-2xl hover:shadow-purple-500/25 hover:scale-105'
+                  : 'bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:shadow-2xl hover:shadow-orange-500/25 hover:scale-105'
               }`}
             >
               {isSubmitting ? (

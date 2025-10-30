@@ -76,7 +76,7 @@ const ExperienceSection = forwardRef((props, ref) => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div ref={headerRef} className={`text-center mb-20 scroll-reveal ${isHeaderVisible ? 'revealed' : ''}`}>
           <h2 className="text-5xl font-bold mb-6" style={{
-            background: 'linear-gradient(to right, white, #d946ef)',
+            background: 'linear-gradient(to right, white, #f59e0b)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
@@ -91,7 +91,7 @@ const ExperienceSection = forwardRef((props, ref) => {
         <div className="relative">
           {/* Timeline line */}
           <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 transform -translate-x-1/2" style={{
-            background: 'linear-gradient(to bottom, #a855f7, #06b6d4)'
+            background: 'linear-gradient(to bottom, #f59e0b, #ea580c)'
           }}></div>
           
           <div className="space-y-12">
@@ -107,10 +107,10 @@ const ExperienceSection = forwardRef((props, ref) => {
                 >
                 {/* Timeline dot */}
                 <div className="hidden md:block absolute left-8 w-4 h-4 rounded-full transform -translate-x-1/2 group-hover:scale-125 transition-transform duration-300" style={{
-                  background: 'linear-gradient(to right, #a855f7, #06b6d4)'
+                  background: 'linear-gradient(to right, #f59e0b, #ea580c)'
                 }}></div>
                 
-                <div className={`md:ml-20 p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-purple-500/50 transition-all duration-500 ${
+                <div className={`md:ml-20 p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-500 ${
                   index % 2 === 0 
                     ? 'md:mr-20' 
                     : 'md:ml-20'
@@ -132,10 +132,10 @@ const ExperienceSection = forwardRef((props, ref) => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors duration-300">
+                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors duration-300">
                           {exp.title}
                         </h3>
-                        <p className="text-purple-400 font-semibold">{exp.company}</p>
+                        <p className="text-orange-500 font-semibold">{exp.company}</p>
                       </div>
                     </div>
                     <div className="mt-2 md:mt-0">
@@ -154,7 +154,7 @@ const ExperienceSection = forwardRef((props, ref) => {
                     {exp.achievements.map((achievement, achievementIndex) => (
                       <div key={achievementIndex} className="flex items-start">
                         <div className="w-2 h-2 rounded-full mt-3 mr-3 flex-shrink-0" style={{
-                          background: 'linear-gradient(to right, #a855f7, #06b6d4)'
+                          background: 'linear-gradient(to right, #f59e0b, #ea580c)'
                         }}></div>
                         <p className="text-gray-300">{achievement}</p>
                       </div>

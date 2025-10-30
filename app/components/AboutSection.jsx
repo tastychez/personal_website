@@ -23,7 +23,7 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
   return (
     <section ref={ref} id="about" className="relative pt-32 pb-20 px-6 min-h-screen flex items-center overflow-visible">
       <div 
-        className="absolute inset-0 bg-gradient-to-br from-purple-900/10 to-cyan-900/10"
+        className="absolute inset-0 bg-gradient-to-br from-orange-900/10 to-red-900/10"
         style={{
           transform: `translateY(${scrollY * 0.5}px)`,
         }}
@@ -40,7 +40,7 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
                   marginBottom: '0.1em',
                   paddingBottom: '0.1em',
                   overflow: 'visible',
-                  background: 'linear-gradient(to right, white, #c084fc, #06b6d4)',
+                  background: 'linear-gradient(to right, white, #f59e0b, #ea580c)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text'
@@ -48,7 +48,7 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
               >
                 Hi, I'm {personalInfo.name.split(' ')[0]}
               </h1>
-              <p className="text-3xl text-purple-300 font-light">
+              <p className="text-3xl text-amber-300 font-light">
                 {personalInfo.title}
               </p>
               <p className="text-xl text-gray-300 leading-relaxed">
@@ -64,7 +64,7 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
                   style={{
                     borderWidth: '1px',
                     borderStyle: 'solid',
-                    borderColor: '#a855f744'
+                    borderColor: '#f59e0b44'
                   }}
                 >
                   {skill}
@@ -81,7 +81,7 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
               }}
             >
               <div className="absolute inset-0 w-96 h-96 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500" style={{
-                background: 'linear-gradient(to right, #a855f7, #06b6d4)'
+                background: 'linear-gradient(to right, #f59e0b, #ea580c)'
               }}></div>
               <img
                 src={personalInfo.photo}
@@ -89,7 +89,7 @@ const AboutSection = forwardRef(({ activeTab, setActiveTab, scrollY }, ref) => {
                 className="w-96 h-96 rounded-2xl object-cover shadow-2xl border-4 border-white/20 relative z-10 group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute -inset-1 rounded-2xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-500" style={{
-                background: 'linear-gradient(to right, #a855f7, #06b6d4)'
+                background: 'linear-gradient(to right, #f59e0b, #ea580c)'
               }}></div>
             </div>
           </div>

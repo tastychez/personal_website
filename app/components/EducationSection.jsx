@@ -46,7 +46,7 @@ const EducationSection = forwardRef((props, ref) => {
       <div className="max-w-7xl mx-auto relative z-10">
         <div ref={headerRef} className={`text-center mb-20 scroll-reveal ${isHeaderVisible ? 'revealed' : ''}`}>
           <h2 className="text-5xl font-bold mb-6" style={{
-            background: 'linear-gradient(to right, white, #06b6d4)',
+            background: 'linear-gradient(to right, white, #f59e0b)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
@@ -61,7 +61,7 @@ const EducationSection = forwardRef((props, ref) => {
         <div className="relative">
           {/* Timeline line */}
           <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 transform -translate-x-1/2" style={{
-            background: 'linear-gradient(to bottom, #06b6d4, #a855f7)'
+            background: 'linear-gradient(to bottom, #f59e0b, #ea580c)'
           }}></div>
           
           <div className="space-y-12">
@@ -77,25 +77,25 @@ const EducationSection = forwardRef((props, ref) => {
                 >
                 {/* Timeline dot */}
                 <div className="hidden md:block absolute left-8 w-4 h-4 rounded-full transform -translate-x-1/2 group-hover:scale-125 transition-transform duration-300" style={{
-                  background: 'linear-gradient(to right, #06b6d4, #a855f7)'
+                  background: 'linear-gradient(to right, #f59e0b, #ea580c)'
                 }}></div>
                 
                 <div 
                   ref={eduRef}
-                  className={`md:ml-20 p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 transition-all duration-500 scroll-reveal ${isEduVisible ? 'revealed' : ''} ${
+                  className={`md:ml-20 p-8 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-orange-500/50 transition-all duration-500 scroll-reveal ${isEduVisible ? 'revealed' : ''} ${
                     index % 2 === 0 
                       ? 'md:mr-20' 
                       : 'md:ml-20'
                   }`}>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-300">
+                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-300 transition-colors duration-300">
                         {edu.degree}
                       </h3>
-                      <p className="text-cyan-400 font-semibold">{edu.school}</p>
+                      <p className="text-orange-500 font-semibold">{edu.school}</p>
                     </div>
                     <div className="mt-2 md:mt-0 flex items-center">
-                      <span className="text-purple-400 font-medium bg-purple-400/10 px-3 py-1 rounded-full mr-3">
+                      <span className="text-amber-500 font-medium bg-amber-500/10 px-3 py-1 rounded-full mr-3">
                         {edu.period}
                       </span>
                       <span className="text-yellow-400 font-semibold bg-yellow-400/10 px-3 py-1 rounded-full">
@@ -113,7 +113,7 @@ const EducationSection = forwardRef((props, ref) => {
                     {edu.achievements.map((achievement, achievementIndex) => (
                       <div key={achievementIndex} className="flex items-start">
                         <div className="w-2 h-2 rounded-full mt-3 mr-3 flex-shrink-0" style={{
-                          background: 'linear-gradient(to right, #06b6d4, #a855f7)'
+                          background: 'linear-gradient(to right, #f59e0b, #ea580c)'
                         }}></div>
                         <p className="text-gray-300">{achievement}</p>
                       </div>
